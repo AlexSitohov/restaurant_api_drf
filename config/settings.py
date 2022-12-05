@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
+    'drf_yasg',
     'django.contrib.staticfiles',
     'rest_framework',
     'main.apps.MainConfig',
