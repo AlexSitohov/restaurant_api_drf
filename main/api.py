@@ -118,3 +118,8 @@ class OrderAPI(APIView):
             serializer.save()
             payment(serializer)
             return Response(serializer.data)
+
+
+class CustomerViewSet(ModelViewSet):
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer

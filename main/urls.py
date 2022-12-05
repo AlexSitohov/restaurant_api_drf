@@ -7,7 +7,7 @@ router = SimpleRouter()
 router.register('restaurant', RestaurantAPI)
 router.register('worker', WorkerAPI)
 router.register('dish', DishAPI)
-
+router.register('customer', CustomerViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
@@ -16,6 +16,5 @@ urlpatterns = [
     path('api/workers/', WorkersAPIView.as_view()),
     path('api/workers/<int:pk>/', WorkerAPIView.as_view()),
     path('api/rate_restaurant/', RateRestaurants.as_view()),
-    path('api/order/',OrderAPI.as_view())
-
+    path('api/order/', OrderAPI.as_view())
 ]
