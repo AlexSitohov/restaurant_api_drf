@@ -128,3 +128,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = ['https://web-production-4021.up.railway.app']
 
 CORS_ALLOWED_ORIGINS = ['*']
+
+CORS_ALLOW_METHODS = ['*']
+
+CORS_ALLOW_HEADERS = ['*']
