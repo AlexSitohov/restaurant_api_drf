@@ -116,8 +116,18 @@ class OrderAPI(APIView):
         serializer = OrderSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            payment(serializer)
+            if payment(serializer) == 1:
+                return Response({'msg': "3243"})
+
+            # payment(serializer)
+
             return Response(serializer.data)
+
+
+#
+# class OrderAPI(ListCreateAPIView):
+#     queryset= Order.objects.all()
+#     serializer_class = OrderSerializer
 
 
 class CustomerViewSet(ModelViewSet):

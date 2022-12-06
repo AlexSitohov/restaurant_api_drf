@@ -47,7 +47,7 @@ class Dish(Model):
 class Order(Model):
     client = ForeignKey('Customer', on_delete=CASCADE)
     restaurant = ForeignKey(Restaurant, related_name='orders', on_delete=CASCADE, null=True, blank=True)
-    dish = ForeignKey(Dish, on_delete=CASCADE)
+    dish = ManyToManyField(Dish)
     officiant = ForeignKey(Worker, on_delete=CASCADE)
     order_time = DateTimeField(auto_now_add=True)
 
