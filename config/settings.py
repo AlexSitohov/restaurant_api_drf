@@ -45,6 +45,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
@@ -126,5 +129,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = ['https://web-production-4021.up.railway.app']
-
-CORS_ORIGIN_ALLOW_ALL = True
+#
+# CORS_ALLOWED_ORIGINS = ['*']
+#
+# CORS_ALLOW_METHODS = ['*']
+#
+# CORS_ALLOW_HEADERS = ['*']
